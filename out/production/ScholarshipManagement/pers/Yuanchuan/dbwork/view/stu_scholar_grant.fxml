@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pers.Yuanchuan.dbwork.view.StuScholarGrantController">
+   <children>
+      <AnchorPane fx:id="tab_pane" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <children>
+            <Text layoutX="269.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="查询结果">
+               <font>
+                  <Font name="System Bold Italic" size="16.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="242.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/green_query.png" />
+               </image>
+            </ImageView>
+            <TableView fx:id="stu_scholar_tab" layoutX="30.0" layoutY="115.0" prefHeight="200.0" prefWidth="541.0">
+              <columns>
+                <TableColumn fx:id="id_col" prefWidth="150.66665649414062" text="学号" />
+                <TableColumn fx:id="name_col" prefWidth="90.33331298828125" text="姓名" />
+                  <TableColumn fx:id="major_col" prefWidth="132.66668701171875" text="专业" />
+                  <TableColumn fx:id="scholar_col" prefWidth="216.0" text="奖学金名称" />
+                 <TableColumn fx:id="exam_col" prefWidth="100.0" text="审核状态" />
+                 <TableColumn fx:id="state_col" prefWidth="100.0" text="发放状态" />
+              </columns>
+            </TableView>
+             <Button layoutX="180.0" layoutY="329.0" mnemonicParsing="false" onAction="#set_action" prefHeight="27.0" prefWidth="88.0" text="提交发放" />
+             <Button layoutX="336.0" layoutY="329.0" mnemonicParsing="false" onAction="#return_action" prefHeight="27.0" prefWidth="58.0" text="返回" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="query_pane" prefHeight="200.0" prefWidth="200.0">
+         <children>
+<!--            <Text layoutX="252.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="学生获奖查询">-->
+<!--               <font>-->
+<!--                  <Font name="System Bold Italic" size="16.0" />-->
+<!--               </font>-->
+<!--            </Text>-->
+<!--            <ImageView fitHeight="27.0" fitWidth="28.0" layoutX="225.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">-->
+<!--               <image>-->
+<!--                  <Image url="@../images/blue_query.png" />-->
+<!--               </image>-->
+<!--            </ImageView>-->
+<!--            <Text layoutX="180.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="学号：">-->
+<!--               <font>-->
+<!--                  <Font size="16.0" />-->
+<!--               </font>-->
+<!--            </Text>-->
+<!--            <Text layoutX="180.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="姓名：">-->
+<!--               <font>-->
+<!--                  <Font size="16.0" />-->
+<!--               </font>-->
+<!--            </Text>-->
+
+
+            <Text layoutX="244.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="奖学金发放审核">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="27.0" fitWidth="29.0" layoutX="215.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/modify.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="34.0" fitWidth="29.0" layoutX="75.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/title.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="104.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="请输入奖学金编号：">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+
+            <TextField fx:id="modify_scholar_text" layoutX="230.0" layoutY="96.0" />
+            <Button layoutX="460.0" layoutY="95.0" mnemonicParsing="false" onAction="#query_action" text="查询信息" />
+
+
+<!--            <TextField fx:id="id_text" layoutX="225.0" layoutY="152.0" />-->
+<!--            <TextField fx:id="name_text" layoutX="225.0" layoutY="207.0" />-->
+<!--            <Button layoutX="228.0" layoutY="257.0" mnemonicParsing="false" onAction="#query_action" prefHeight="27.0" prefWidth="58.0" text="查询" />-->
+<!--            <ImageView fitHeight="27.0" fitWidth="96.0" layoutX="134.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">-->
+<!--               <image>-->
+<!--                  <Image url="@../images/id_card_person.png" />-->
+<!--               </image>-->
+<!--            </ImageView>-->
+<!--            <ImageView fitHeight="27.0" fitWidth="40.0" layoutX="141.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true">-->
+<!--               <image>-->
+<!--                  <Image url="@../images/username.png" />-->
+<!--               </image>-->
+<!--            </ImageView>-->
+<!--            <Button layoutX="324.0" layoutY="257.0" mnemonicParsing="false" onAction="#reset_action" prefHeight="27.0" prefWidth="58.0" text="重置" />-->
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

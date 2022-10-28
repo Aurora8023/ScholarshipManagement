@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="rootpane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pers.Yuanchuan.dbwork.view.MainFrameController">
+   <center>
+      <AnchorPane prefHeight="600.0" prefWidth="1000.0">
+         <children>
+            <ImageView fitHeight="131.0" fitWidth="142.0" layoutX="429.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/start_picture1.png" />
+               </image>
+            </ImageView>
+            <Text fill="#337cf2" layoutX="437.0" layoutY="311.0" strokeType="OUTSIDE" strokeWidth="0.0" text="欢迎使用" wrappingWidth="126.24020385742188">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Text layoutX="356.0" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="奖学金发放管理系统">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <Text layoutX="340.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Scholarship issuance management system">
+               <font>
+                  <Font name="System Italic" size="16.0" />
+               </font>
+            </Text>
+            <Text fill="#eb7e3b" fontSmoothingType="LCD" layoutX="412.0" layoutY="419.0" strokeType="OUTSIDE" strokeWidth="0.0" text="请选择上方菜单开始操作">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <MenuBar prefHeight="25.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+        <menus>
+
+            <Menu mnemonicParsing="false" text="信息查询">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#query_stu_basic_event" text="基本信息查询" />
+                  <MenuItem mnemonicParsing="false" onAction="#query_scholarship_event" text="奖学金信息查询" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="奖学金申请">
+                <items>
+                    <MenuItem mnemonicParsing="false" onAction="#apply_scholarship_event" text="奖学金申请" />
+                    <MenuItem mnemonicParsing="false" onAction="#query_stu1_scholar_event" text="申请状态查询" />
+                </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="账号设置">
+                <items>
+                    <MenuItem mnemonicParsing="false" onAction="#update_password_event" text="修改密码" />
+                </items>
+            </Menu>
+<!--          <Menu mnemonicParsing="false" text="设置">-->
+<!--            <items>-->
+<!--              <MenuItem mnemonicParsing="false" onAction="#add_student_event" text="安全退出" />-->
+<!--            </items>-->
+<!--          </Menu>-->
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

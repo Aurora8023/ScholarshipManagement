@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="jasperreports-3.7.4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/jasperreports-3.7.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/mysql-connector-java-8.0.21.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

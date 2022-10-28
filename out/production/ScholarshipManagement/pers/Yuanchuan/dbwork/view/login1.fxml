@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Label?>
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="345.0" prefWidth="519.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pers.Yuanchuan.dbwork.view.LoginController">
+    <children>
+        <AnchorPane fx:id="tab_pane" prefHeight="200.0" prefWidth="200.0" visible="false">
+            <children>
+                <Label layoutX="220.0" layoutY="80.0" text="密码重置">
+                    <font>
+                        <Font name="System Bold" size="25.0" />
+                    </font>
+                </Label>
+<!--                <ImageView fitHeight="55.0" fitWidth="49.0" layoutX="147.0" layoutY="66.0">-->
+<!--                    <image>-->
+<!--                        <Image url="@../images/title.png" />-->
+<!--                    </image>-->
+<!--                </ImageView>-->
+<!--                <ImageView fitHeight="34.0" fitWidth="28.0" layoutX="115.0" layoutY="139.0">-->
+<!--                    <image>-->
+<!--                        <Image url="@../images/username.png" />-->
+<!--                    </image>-->
+<!--                </ImageView>-->
+                <Label layoutX="130.0" layoutY="146.0" text="姓   名">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+<!--                <ImageView fitHeight="27.0" fitWidth="28.0" layoutX="115.0" layoutY="186.0">-->
+<!--                    <image>-->
+<!--                        <Image url="@../images/password.png" />-->
+<!--                    </image>-->
+<!--                </ImageView>-->
+                <Label layoutX="130.0" layoutY="190.0" text="证件号">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label layoutX="130.0" layoutY="234.0" text="学   号">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="name_txt" layoutX="190.0" layoutY="144.0" promptText="姓名" />
+                <TextField fx:id="card_txt" layoutX="190.0" layoutY="188.0" promptText="身份证件号码" />
+                <TextField fx:id="id_txt" layoutX="190.0" layoutY="232.0" promptText="学号" />
+                <Button fx:id="login_btn1" layoutX="190.0" layoutY="280.0" mnemonicParsing="false" onAction="#set_event" prefHeight="27.0" prefWidth="80.0" text="重置密码">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="reset_btn1" layoutX="330.0" layoutY="280.0" mnemonicParsing="false" onAction="#return_event" prefHeight="27.0" prefWidth="57.0" text="取消">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <ImageView fitHeight="98.0" fitWidth="99.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/ZZU.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="query_pane" prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <Label layoutX="202.0" layoutY="80.0" text="奖学金发放管理系统">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="55.0" fitWidth="49.0" layoutX="147.0" layoutY="66.0">
+                    <image>
+                        <Image url="@../images/title.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="34.0" fitWidth="28.0" layoutX="115.0" layoutY="139.0">
+                    <image>
+                        <Image url="@../images/username.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="150.0" layoutY="146.0" text="用户名">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="27.0" fitWidth="28.0" layoutX="115.0" layoutY="186.0">
+                    <image>
+                        <Image url="@../images/password.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="151.0" layoutY="190.0" text="密   码">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label layoutX="151.0" layoutY="234.0" text="验证码">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <ImageView fx:id="pic2" fitHeight="25.0" fitWidth="100.0" layoutX="310.0" layoutY="232.5">
+                    <image>
+                        <Image url="@../images/0495.png" />
+                    </image>
+                </ImageView>
+                <TextField fx:id="userName_txt" layoutX="211.0" layoutY="144.0" promptText="请输入用户名" />
+                <PasswordField fx:id="password_txt" layoutX="211.0" layoutY="188.0" promptText="请输入密码" />
+                <TextField fx:id="yzm_txt" layoutX="211.0" layoutY="232.0" maxWidth="90"/>
+                <Button fx:id="login_btn" layoutX="211.0" layoutY="280.0" mnemonicParsing="false" onAction="#login_event" prefHeight="27.0" prefWidth="57.0" text="登录">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="reset_btn" layoutX="330.0" layoutY="280.0" mnemonicParsing="false" onAction="#reset_event" prefHeight="27.0" prefWidth="80.0" text="忘记密码">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <ImageView fitHeight="98.0" fitWidth="99.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/ZZU.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

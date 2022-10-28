@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="poi-ooxml-5.2.2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/poi-ooxml-5.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/poi-ooxml-full-5.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/slf4j-api-1.7.36.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

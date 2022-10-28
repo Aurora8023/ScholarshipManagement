@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.control.PasswordField?>
+<?import com.gluonhq.charm.glisten.control.ToggleButtonGroup?>
+<?import javafx.scene.control.RadioButton?>
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pers.Yuanchuan.dbwork.view.QueryStuBasicController">
+    <children>
+        <AnchorPane fx:id="tab_pane" prefHeight="200.0" prefWidth="200.0" visible="false">
+            <children>
+                <Text layoutX="280.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="基本信息" >
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Text>
+                <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="240.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/write.png" />
+                    </image>
+                </ImageView>
+                <Text layoutX="-50.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="学号：">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Text>
+                <Text layoutX="-50.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="姓名：">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Text>
+                <Text layoutX="-50.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="性别：">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Text>
+                <Text layoutX="-50.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="入学年份：">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Text>
+                <Text layoutX="-50.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="类型：">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Text>
+                <Text layoutX="-50.0" layoutY="339.0" strokeType="OUTSIDE" strokeWidth="0.0" text="身份证号：">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Text>
+                <Text layoutX="350.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="开户银行：">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Text>
+                <Text layoutX="350.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="银行卡号：">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Text>
+                <Text layoutX="350.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="所在班级：">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Text>
+                <Text layoutX="350.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="所在专业：">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Text>
+                <Text layoutX="350.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="所在院系：">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Text>
+                <Text layoutX="350.0" layoutY="339.0" strokeType="OUTSIDE" strokeWidth="0.0" text="辅导员：">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="stu_id_text" layoutX="50.0" layoutY="128.0" editable="false" />
+                <TextField fx:id="stu_name_text" layoutX="50.0" layoutY="165.0" editable="false" />
+
+                <TextField fx:id="stu_sex_text" layoutX="50.0" layoutY="204.0" editable="false" />
+
+                <TextField fx:id="stu_year_text" layoutX="50.0" layoutY="242.0" editable="false" />
+                <TextField fx:id="stu_type_text" layoutX="50.0" layoutY="280.0" editable="false" />
+                <TextField fx:id="stu_idcard_text" layoutX="50.0" layoutY="318.0" editable="false" />
+
+                <TextField fx:id="stu_khyh_text" layoutX="470.0" layoutY="128.0" editable="false" />
+                <TextField fx:id="stu_yhkh_text" layoutX="470.0" layoutY="165.0" editable="false" />
+                <TextField fx:id="stu_class_text" layoutX="470.0" layoutY="204.0" editable="false" />
+                <TextField fx:id="stu_major_text" layoutX="470.0" layoutY="242.0" editable="false" />
+                <TextField fx:id="stu_faculty_text" layoutX="470.0" layoutY="280.0" editable="false" />
+                <TextField fx:id="stu_fdy_text" layoutX="470.0" layoutY="318.0"  editable="false" />
+
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="query_pane" prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <Text layoutX="252.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="基本信息查询">
+                    <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                    </font>
+                </Text>
+                <ImageView fitHeight="27.0" fitWidth="28.0" layoutX="225.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/blue_query.png" />
+                    </image>
+                </ImageView>
+                <Text layoutX="180.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="密码：">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Text>
+                <PasswordField fx:id="password_text" layoutX="225.0" layoutY="152.0" />
+                <Text layoutX="130.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="注：为了您的信息安全，请输入您的登录密码。">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Text>
+                <Button layoutX="228.0" layoutY="227.0" mnemonicParsing="false" onAction="#query_action" prefHeight="27.0" prefWidth="58.0" text="查询" />
+                <ImageView fitHeight="27.0" fitWidth="96.0" layoutX="134.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/password.png" />
+                    </image>
+                </ImageView>
+                <Button layoutX="324.0" layoutY="227.0" mnemonicParsing="false" onAction="#reset_action" prefHeight="27.0" prefWidth="58.0" text="重置" />
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

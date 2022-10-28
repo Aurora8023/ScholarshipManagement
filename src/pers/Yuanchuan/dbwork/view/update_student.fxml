@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import com.gluonhq.charm.glisten.control.ToggleButtonGroup?>
+<?import javafx.scene.control.RadioButton?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pers.Yuanchuan.dbwork.view.UpdateStudentController">
+   <children>
+       <AnchorPane fx:id="modify_pane" prefHeight="200.0" prefWidth="200.0" visible="false">
+           <children>
+               <Text layoutX="290.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="修改学生信息" >
+                   <font>
+                       <Font size="16.0" />
+                   </font>
+               </Text>
+               <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="250.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                   <image>
+                       <Image url="@../images/write.png" />
+                   </image>
+               </ImageView>
+               <Text layoutX="-50.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="学号：">
+                   <font>
+                       <Font size="16.0" />
+                   </font>
+               </Text>
+               <Text layoutX="-50.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="姓名：">
+                   <font>
+                       <Font size="16.0" />
+                   </font>
+               </Text>
+               <Text layoutX="-50.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="性别：">
+                   <font>
+                       <Font size="16.0" />
+                   </font>
+               </Text>
+               <Text layoutX="-50.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="入学年份：">
+                   <font>
+                       <Font size="16.0" />
+                   </font>
+               </Text>
+               <Text layoutX="-50.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="类型：">
+                   <font>
+                       <Font size="16.0" />
+                   </font>
+               </Text>
+               <Text layoutX="350.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="身份证号：">
+                   <font>
+                       <Font size="16.0" />
+                   </font>
+               </Text>
+               <Text layoutX="350.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="开户银行：">
+                   <font>
+                       <Font size="16.0" />
+                   </font>
+               </Text>
+               <Text layoutX="350.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="银行卡号：">
+                   <font>
+                       <Font size="16.0" />
+                   </font>
+               </Text>
+               <Text layoutX="350.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="所在班级：">
+                   <font>
+                       <Font size="16.0" />
+                   </font>
+               </Text>
+               <Text layoutX="350.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="专业号：">
+                   <font>
+                       <Font size="16.0" />
+                   </font>
+               </Text>
+               <TextField fx:id="stu_id_text"    layoutX="50.0" layoutY="128.0" editable="false" disable="true"/>
+               <TextField fx:id="stu_name_text" layoutX="50.0" layoutY="167.5" editable="true"/>
+
+               <ToggleButtonGroup layoutX="50.0" layoutY="210.0" selectionType="SINGLE" disable="false">
+                   <toggles>
+                       <RadioButton fx:id="man" mnemonicParsing="false" selected="false" onAction="#man_action" text="男       "/>
+                       <RadioButton fx:id="woman" mnemonicParsing="false" selected="false" onAction="#woman_action" text="女"/>
+                   </toggles>
+               </ToggleButtonGroup>
+
+               <TextField fx:id="stu_year_text" layoutX="50.0" layoutY="242.0" editable="true"/>
+
+               <ToggleButtonGroup layoutX="50.0" layoutY="286.0" selectionType="SINGLE">
+                   <toggles>
+                       <RadioButton fx:id="zk" mnemonicParsing="false" selected="false" onAction="#zk_action" text="专科  "/>
+                       <RadioButton fx:id="bk" mnemonicParsing="false" selected="true" onAction="#bk_action" text="本科  "/>
+                       <RadioButton fx:id="yjs" mnemonicParsing="false" selected="false" onAction="#yjs_action" text="研究生"/>
+                   </toggles>
+               </ToggleButtonGroup>
+
+               <TextField fx:id="stu_idcard_text" layoutX="470.0" layoutY="128.0" editable="true"/>
+               <TextField fx:id="stu_khyh_text" layoutX="470.0" layoutY="165.0" editable="true"/>
+               <TextField fx:id="stu_yhkh_text" layoutX="470.0" layoutY="204.0" editable="true"/>
+               <TextField fx:id="stu_class_text" layoutX="470.0" layoutY="242.0" editable="true"/>
+               <TextField fx:id="stu_major_text" layoutX="470.0" layoutY="280.0" editable="true"/>
+
+
+               <Button layoutX="200.0" layoutY="350.0" mnemonicParsing="false" onAction="#modify_action" text="修改" />
+               <Button layoutX="400.0" layoutY="350.0" mnemonicParsing="false" onAction="#reset_action" text="取消" />
+
+
+
+           </children>
+       </AnchorPane>
+      <AnchorPane fx:id="main_pane" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Text layoutX="252.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="学生信息修改">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="221.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/write.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="134.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="修改的学生学号：">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="96.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/id_card_person.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="modify_id_text" layoutX="246.0" layoutY="104.0" />
+            <Button layoutX="460.0" layoutY="104.0" mnemonicParsing="false" onAction="#query_action" text="查询信息" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import com.gluonhq.charm.glisten.control.ToggleButtonGroup?>
+<?import javafx.scene.control.RadioButton?>
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pers.Yuanchuan.dbwork.view.StatisticsController">
+    <children>
+        <AnchorPane fx:id="tab_pane" prefHeight="200.0" prefWidth="200.0" visible="false">
+            <children>
+                <Text layoutX="269.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="查询结果">
+                    <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                    </font>
+                </Text>
+                <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="242.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/green_query.png" />
+                    </image>
+                </ImageView>
+                <TableView fx:id="xs_tab" layoutX="30.0" layoutY="115.0" prefHeight="200.0" prefWidth="541.0">
+                    <columns>
+                        <TableColumn fx:id="id_col" prefWidth="150.66665649414062" text="学号" />
+                        <TableColumn fx:id="name_col" prefWidth="90.33331298828125" text="姓名" />
+                        <TableColumn fx:id="major_col" prefWidth="132.66668701171875" text="专业" />
+                        <TableColumn fx:id="sum_col" prefWidth="120" text="奖学金数量" />
+                    </columns>
+                </TableView>
+                <Button layoutX="276.0" layoutY="329.0" mnemonicParsing="false"  prefHeight="27.0" prefWidth="58.0" onAction="#return_action" text="返回" />
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="tab_pane1" prefHeight="200.0" prefWidth="200.0" visible="false">
+            <children>
+                <Text layoutX="269.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="查询结果">
+                    <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                    </font>
+                </Text>
+                <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="242.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/green_query.png" />
+                    </image>
+                </ImageView>
+                <TableView fx:id="tj_tab" layoutX="30.0" layoutY="115.0" prefHeight="200.0" prefWidth="541.0">
+                    <columns>
+                        <TableColumn fx:id="major1_col" prefWidth="132.66668701171875" text="专业" />
+                        <TableColumn fx:id="sum1_col" prefWidth="120" text="奖学金数量" />
+                    </columns>
+                </TableView>
+                <Button layoutX="276.0" layoutY="329.0" mnemonicParsing="false"  prefHeight="27.0" prefWidth="58.0" onAction="#return_action" text="返回" />
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="query_pane" prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <Text layoutX="252.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="奖学金统计">
+                    <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                    </font>
+                </Text>
+                <ImageView fitHeight="27.0" fitWidth="28.0" layoutX="225.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/blue_query.png" />
+                    </image>
+                </ImageView>
+                <Text layoutX="150.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="统计类型：">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Text>
+                <Button layoutX="276.0" layoutY="190.0" mnemonicParsing="false"  prefHeight="27.0" prefWidth="58.0" onAction="#query_action" text="查询" />
+                <ImageView fitHeight="27.0" fitWidth="40.0" layoutX="120.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/yes.png" />
+                    </image>
+                </ImageView>
+                <ToggleButtonGroup layoutX="230.0" layoutY="122.5" selectionType="SINGLE">
+                    <toggles>
+                        <RadioButton fx:id="accurate" mnemonicParsing="false" selected="true" text="学生获奖统计  " />
+                        <RadioButton fx:id="vague" mnemonicParsing="false" text="专业获奖统计" />
+                    </toggles>
+                </ToggleButtonGroup>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>
